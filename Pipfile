@@ -4,15 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+clu = "*"
+diffusers = {extras = ["flax"], version = "*"}
 flax = "*"
 ipykernel = "*"
-# ----- Metal
+# ----- Metal -----
 # jax = "==0.4.26"
 # jaxlib = "==0.4.26"
 # jax-metal = "*"
-# ----- CUDA
-# jax = {extras = ["cuda12"], version = "*"}
-# ----- TPU (need to run a poseriori)
+# ----- CUDA -----
+jax = {extras = ["cuda12"], version = "*"}
+# ----- TPU (need to run a poseriori) -----
 # pip install -U "jax[tpu]" -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
 matplotlib = "*"
 scikit-image = "*"
@@ -20,7 +22,8 @@ sympy = "*"
 tensorflow = "*"
 tensorflow_datasets = "*"
 torch = "*"
+transformers = "*"
 
 [requires]
 python_version = "3.10"
-python_full_version = "3.10.14"
+python_full_version = "3.10.12"
